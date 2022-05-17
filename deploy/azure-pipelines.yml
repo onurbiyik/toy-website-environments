@@ -25,5 +25,5 @@ stages:
 - template: pipeline-templates/deploy.yml
   parameters:
     environmentType: Production
-    resourceGroupName: ToWebsiteProduction
+    resourceGroupName: ToyWebsiteProduction
     serviceConnectionName: ToWebsiteProduction
