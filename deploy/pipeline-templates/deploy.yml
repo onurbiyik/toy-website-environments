@@ -28,7 +28,7 @@ stages:
                 --template-file deploy/main.bicep \
                 --parameters environmentType=${{parameters.environmentType}}
 
-- ${{ if eq(parameters.environmentType, 'TestEnvir') }}:
+- ${{ if eq(parameters.environmentType, 'ProdEnvir') }}:
   - stage: Preview_${{parameters.environmentType}}
     displayName: Preview (${{parameters.environmentType}} Environment)
     jobs:
