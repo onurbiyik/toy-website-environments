@@ -8,7 +8,7 @@ parameters:
 
 stages:
 
-- ${{ if ne(parameters.environmentType, 'ProdEnvir') }}:
+- ${{ if ne(parameters.environmentType, 'Production') }}:
   - stage: Validate_${{parameters.environmentType}}
     displayName: Validate (${{parameters.environmentType}} Environment)
     jobs:
@@ -28,7 +28,7 @@ stages:
                 --template-file deploy/main.bicep \
                 --parameters environmentType=${{parameters.environmentType}}
 
-- ${{ if eq(parameters.environmentType, 'ProdEnvir') }}:
+- ${{ if eq(parameters.environmentType, 'Production') }}:
   - stage: Preview_${{parameters.environmentType}}
     displayName: Preview (${{parameters.environmentType}} Environment)
     jobs:

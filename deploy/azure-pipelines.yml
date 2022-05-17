@@ -17,13 +17,13 @@ stages:
 # Deploy to the test environment.
 - template: pipeline-templates/deploy.yml
   parameters:
-    environmentType: TestEnvir
+    environmentType: Test
     resourceGroupName: ToyWebsiteTest
     serviceConnectionName: ToyWebsiteTest
 
 # Deploy to the production environment.
 - template: pipeline-templates/deploy.yml
   parameters:
-    environmentType: ProdEnvir
+    environmentType: Production
     resourceGroupName: ToWebsiteProduction
     serviceConnectionName: ToWebsiteProduction
