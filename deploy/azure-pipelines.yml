@@ -19,11 +19,11 @@ stages:
   parameters:
     environmentType: ToyWebsiteTestEnv
     resourceGroupName: ToyWebsiteTest
-    serviceConnectionName: ToyWebsiteTest
+    serviceConnectionName: ToyWebsiteTestEnv
 
 # Deploy to the production environment.
 - template: pipeline-templates/deploy.yml
   parameters:
     environmentType: ToyWebsiteProdEnv
-    resourceGroupName: ToyWebsiteProduction
-    serviceConnectionName: ToyWebsiteProduction
+    resourceGroupName: ToWebsiteProduction
+    serviceConnectionName: ToyWebsiteProdEnv
